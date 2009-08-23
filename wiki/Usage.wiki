@@ -5,7 +5,7 @@
 
 See the following example code for a usage example.<br/>The base64_encode function is a very simple implementation, which is easy to use. 
 = Example =
-
+Here, we take the first argument as the input for our encoding function and print the resulting encoded string.
 <code>
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,6 +15,20 @@ See the following example code for a usage example.<br/>The base64_encode functi
 
 int main()
 {
+    char *buf;
+    
+    buf = malloc(strlen(argv[1]));
+
+    // The encoding function.
+    // First argument is the string to encode, second argument is the length.
+    // The function returns a char`*` to the encoded string.
+    buf = b64_encode(argv[1], strlen(argv[1]));
+
+    // Let's print origin and decoded message
+    printf("Origin: %s\nDecoded: %s\n", argv[1], buf);
+
+    // Clean up and leave...
+    free(buf);
     return 0;
 }
 </code>
