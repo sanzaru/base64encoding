@@ -21,7 +21,7 @@ int main()
     // First argument is the string to encode, second argument is the length.
     // The function returns a char`*` to the encoded string.
     buf = b64_encode(`argv[1], strlen(argv[1]`));
-
+</code>
     // Let's print origin and decoded message
     printf("Origin: %s\nDecoded: %s\n", `argv[1]`, buf);
 
