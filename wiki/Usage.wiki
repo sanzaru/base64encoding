@@ -4,6 +4,11 @@
 = Introduction =
 
 See the following example code for a usage example.<br/>The base64_encode function is a very simple implementation, which is easy to use. 
+<br/>
+*Function:* <code>char `*` b64_encode(char `*`in, int l); </code>
+The first argument is a char pointer to the string we want to encode, the second is the length of the string to encode. As a result this function returns a pointer to the encoded string.
+
+
 = Example =
 Here, we take the first argument as the input for our encoding function and print the resulting encoded string.
 <code>
