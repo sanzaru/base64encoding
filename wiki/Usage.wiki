@@ -15,7 +15,7 @@ Here, we take the first argument as the input for our encoding function and prin
 int main()
 {
     char `*`buf;
-    buf `=` malloc(strlen(argv[1]));
+    buf `=` malloc(strlen(`argv[1]`));
 </code>   
 
     // The encoding function.
