@@ -29,7 +29,7 @@ int main(int argc, char **argv)
         printf("usage %s `<string>`\n", argv[0]);
         exit(1);
     }
-    
+</code>
     // We have a string, so let's allocate memory for it
     len = strlen(argv[1]);
     out = malloc(strlen(argv[1]);
