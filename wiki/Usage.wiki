@@ -7,8 +7,7 @@ See the following example code for a usage example.<br/>The base64_encode functi
 
 = Example =
 
-<code>
-#include <stdio.h>
+<code>#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
