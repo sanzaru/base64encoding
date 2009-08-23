@@ -14,9 +14,7 @@ See the following example code for a usage example.<br/>The base64_encode functi
 // We need to include the header to use 
 // the encode function
 #include "base64.h"
-</code>
-Here we see our include section. We need some standard includes and of course our base64 header file.<br/>Lets's begin the main loop...
-<code>
+
 // The main loop
 int main(int argc, char **argv)
 {
@@ -29,6 +27,10 @@ int main(int argc, char **argv)
         printf("usage %s `<string>`\n", argv[0]);
         exit(1);
     }
+
+</code>
+Here we see our include section. We need some standard includes and of course our base64 header file.<br/>Lets's begin the main loop...
+<code>
 </code>
     // We have a string, so let's allocate memory for it
     len = strlen(argv[1]);
