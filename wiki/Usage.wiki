@@ -19,6 +19,7 @@ int main()
     
     buf = malloc(strlen(argv[1]));
 
+</code>
     // The encoding function.
     // First argument is the string to encode, second argument is the length.
     // The function returns a char`*` to the encoded string.
