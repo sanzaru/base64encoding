@@ -15,7 +15,9 @@ Here, we take the first argument as the input for our encoding function and prin
 #include <stdlib.h>
 #include <string.h>
 
+// The header, we need for the encode function
 #include "base64.h"
+
 int main()
 {
     char `*`buf;
