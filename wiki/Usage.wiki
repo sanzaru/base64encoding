@@ -23,9 +23,9 @@ int main()
     char `*`buf;
     buf `=` malloc(strlen(`argv[1]`));
 
-    // The encoding function.
-    // First argument is the string to encode, second argument is the length.
-    // The function returns a char`*` to the encoded string.
+    /* The encoding function.
+       First argument is the string to encode, second argument is the length.
+       The function returns a char`*` to the encoded string. */
     buf = b64_encode(`argv[1], strlen(argv[1]`));
 
     // Let's print origin and decoded message
