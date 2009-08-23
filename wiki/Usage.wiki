@@ -15,8 +15,7 @@ See the following example code for a usage example.<br/>The base64_encode functi
 // the encode function
 #include "base64.h"
 </code>
-Here we see our include section. We need some standard includes and of course our base64 header file.
-
+Here we see our include section. We need some standard includes and of course our base64 header file.<br/>Lets's begin the main loop...
 <code>
 // The main loop
 int main(int argc, char **argv)
