@@ -3,8 +3,7 @@
 
 = Introduction =
 
-See the following example code for a usage example.<br/>The base64_encode function is a very simple implementation, which is easy to use. The code comments should explain everything.
-
+See the following example code for a usage example.<br/>The base64_encode function is a very simple implementation, which is easy to use. 
 = Example =
 
 <code>
@@ -15,8 +14,11 @@ See the following example code for a usage example.<br/>The base64_encode functi
 // We need to include the header to use 
 // the encode function
 #include "base64.h"
+</code>
+Here we see our include section. We need some standard includes and of course our base64 header file.
 
-// The main loop 
+<code>
+// The main loop
 int main(int argc, char **argv)
 {
     char *out;
