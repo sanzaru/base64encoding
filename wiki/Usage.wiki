@@ -7,6 +7,11 @@ The base64_encode function is a very simple implementation, which is easy to use
 <br/>
 *Function:* <code>char `*` b64_encode(char `*`in, int l); </code>
 The first argument is a char pointer to the string we want to encode, the second is the length of the string to encode. As a result this function returns a pointer to the encoded string.
+<br />
+The base64_decode function is the function to decode a given base64 encoded string. 
+<br/>
+*Function:* <code>char *b64_decode(char *string, int length);</code>
+The first argument is a char pointer to the string we want to decode, the second is the length of the string to decode. As a result this function returns a pointer to the decoded string.
 <br/>
 See the following example code for a usage example.<br/>
 
