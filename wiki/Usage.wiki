@@ -1,5 +1,5 @@
+#summary Usage of the Base64 encoding function.
 #labels Featured,Phase-Implementation,Phase-Deploy
-#Usage of the Base64 encoding function.
 
 = Introduction =
 
@@ -16,23 +16,28 @@ Here, we take the first argument as the input for our encoding function and prin
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-// The header, we need for the encode function
 #include "base64.h"
 
-int main(int argc, char `**`argv)
+int main(int argc, char **argv)
 {
-    char `*`buf;
-    buf `=` malloc(strlen(`argv[1]`));
+	if(argc < 2 )
+	{
+		printf("usage %s <string>\n", argv[0]);
+		exit(1);
+	}
+	
+	char *out = b64_encode(argv[1], strlen(argv[1]));
+	printf("Base64 2 (%s): %s\nOld len: %d\nNew len: %d\n", argv[1], out, strlen(argv[1]), strlen(out));	
+	
+	
+	// IMPORTANT: Without a '\n' at the end the decode function will fail!!
+	strcat(out, "\n");
+	
+	char *dec = b64_decode(out, strlen(out));
+	printf("Decoded: %s\n", dec);
 
-    // The encoding function.
-    buf = b64_encode(`argv[1], strlen(argv[1]`));
-
-    // Let's print origin and decoded message
-    printf("Origin: %s\nDecoded: %s\n", `argv[1]`, buf);
-
-    // Clean up and leave...
-    free(buf);
-    return 0;
+	free(out);
+	free(dec);
+	return 0;
 }
 </code>
