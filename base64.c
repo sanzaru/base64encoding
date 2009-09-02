@@ -38,7 +38,6 @@ DESCRIPTION:
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 #include <openssl/sha.h>
 #include <openssl/hmac.h>
 #include <openssl/evp.h>
@@ -77,4 +76,25 @@ char *b64_encode(char *string, int length)
   buff[bptr->length-1] = '\0';
   BIO_free_all(b64);
   return buff;
+}
+
+
+/*
+	Decode a string to plain text and return it
+*/
+char *b64_decode(char *input, int length)
+{
+	BIO *b64, *bmem;
+
+	char *buffer = (char *)malloc(strlen(input));
+	memset(buffer, 0, length);
+
+	b64 = BIO_new(BIO_f_base64());
+	bmem = BIO_new_mem_buf(input, length);
+	bmem = BIO_push(b64, bmem);
+
+	BIO_read(bmem, buffer, length);
+
+	BIO_free_all(bmem);
+	return buffer;
 }

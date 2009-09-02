@@ -37,3 +37,5 @@ DESCRIPTION:
 ********************************************************************************************/
 
 char *b64_encode(char *input, int length);
+char *b64_decode(char *string, int length);
+
