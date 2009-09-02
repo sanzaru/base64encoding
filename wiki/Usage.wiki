@@ -10,7 +10,7 @@ The first argument is a char pointer to the string we want to encode, the second
 <br />
 The base64_decode function is the function to decode a given base64 encoded string. 
 <br/>
-*Function:* <code>char *b64_decode(char *string, int length);</code>
+*Function:* <code>char `*`b64_decode(char `*`string, int length);</code>
 The first argument is a char pointer to the string we want to decode, the second is the length of the string to decode. As a result this function returns a pointer to the decoded string.
 <br/>
 See the following example code for a usage example.<br/>
@@ -23,7 +23,7 @@ Here, we take the first argument as the input for our encoding function and prin
 #include <string.h>
 #include "base64.h"
 
-int main(int argc, char **argv)
+int main(int argc, char `**`argv)
 {
 	if(argc < 2 )
 	{
@@ -31,14 +31,14 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 	
-	char *out = b64_encode(argv[1], strlen(argv[1]));
+	char `*`out = b64_encode(argv[1], strlen(argv[1]));
 	printf("Base64 2 (%s): %s\nOld len: %d\nNew len: %d\n", argv[1], out, strlen(argv[1]), strlen(out));	
 	
 	
 	// IMPORTANT: Without a '\n' at the end the decode function will fail!!
 	strcat(out, "\n");
 	
-	char *dec = b64_decode(out, strlen(out));
+	char `*`dec = b64_decode(out, strlen(out));
 	printf("Decoded: %s\n", dec);
 
 	free(out);
