@@ -19,4 +19,4 @@ gcc base64.c -l ssl
 **WINDOWS NOTE:** After compiling, you need the libeay32.dll file in the directory of your compiled binary!
 	
 ## DEPENDENCIES:
-* openSSL-devel (http://www.deanlee.cn/programming/openssl-for-windows/)
+* openSSL development libraries
